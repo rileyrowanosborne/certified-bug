@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://duabt0thcea4o"]
 
 [ext_resource type="Texture2D" uid="uid://obok25ii8vk3" path="res://Assets/Sprites/SuperBugBoy-SpriteSheet.png" id="1_fm463"]
+[ext_resource type="Script" uid="uid://c76q12s2dqs3j" path="res://Scripts/player.gd" id="1_hf81g"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_t73hm"]
 radius = 8.0
@@ -43,6 +44,7 @@ animations = [{
 }]
 
 [node name="Player" type="CharacterBody2D" unique_id=2040866376]
+script = ExtResource("1_hf81g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1790738498]
 position = Vector2(0, -8)
