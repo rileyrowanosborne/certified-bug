@@ -53,4 +53,3 @@ self_modulate = Color(0.9305696, 0.90140146, 0.5459249, 1)
 position = Vector2(1, -15)
 sprite_frames = SubResource("SpriteFrames_knxm8")
 animation = &"Walking"
-frame_progress = 0.65919966
