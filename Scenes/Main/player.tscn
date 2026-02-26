@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://duabt0thcea4o"]
 
 [ext_resource type="Texture2D" uid="uid://obok25ii8vk3" path="res://Assets/Sprites/SuperBugBoy-SpriteSheet.png" id="1_fm463"]
+[ext_resource type="Script" uid="uid://c76q12s2dqs3j" path="res://Scripts/player.gd" id="1_hf81g"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_t73hm"]
 radius = 8.0
@@ -43,6 +44,7 @@ animations = [{
 }]
 
 [node name="Player" type="CharacterBody2D" unique_id=2040866376]
+script = ExtResource("1_hf81g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1790738498]
 position = Vector2(0, -8)
@@ -53,5 +55,3 @@ self_modulate = Color(0.9305696, 0.90140146, 0.5459249, 1)
 position = Vector2(1, -15)
 sprite_frames = SubResource("SpriteFrames_knxm8")
 animation = &"Walking"
-frame = 1
-frame_progress = 0.6856535
