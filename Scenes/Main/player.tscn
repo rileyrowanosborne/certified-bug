@@ -1,11 +1,54 @@
 [gd_scene format=3 uid="uid://duabt0thcea4o"]
 
+[ext_resource type="Texture2D" uid="uid://obok25ii8vk3" path="res://Assets/Sprites/SuperBugBoy-SpriteSheet.png" id="1_fm463"]
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_t73hm"]
 radius = 8.0
-height = 24.0
+height = 16.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hf81g"]
+atlas = ExtResource("1_fm463")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1xlrf"]
+atlas = ExtResource("1_fm463")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nmmoa"]
+atlas = ExtResource("1_fm463")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yhj4d"]
+atlas = ExtResource("1_fm463")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_knxm8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hf81g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1xlrf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nmmoa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yhj4d")
+}],
+"loop": true,
+"name": &"Walking",
+"speed": 5.0
+}]
 
 [node name="Player" type="CharacterBody2D" unique_id=1559956087]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1338207230]
-position = Vector2(0, -12)
+position = Vector2(0, -8)
 shape = SubResource("CapsuleShape2D_t73hm")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1600397112]
+position = Vector2(1, -15)
+sprite_frames = SubResource("SpriteFrames_knxm8")
+animation = &"Walking"
