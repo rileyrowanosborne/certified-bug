@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://duabt0thcea4o"]
+[gd_scene format=3 uid="uid://duabt0thcea4o"]
 
 [ext_resource type="Texture2D" uid="uid://obok25ii8vk3" path="res://Assets/Sprites/SuperBugBoy-SpriteSheet.png" id="1_fm463"]
 
@@ -42,14 +42,13 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" unique_id=1182828331]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1250559926]
 position = Vector2(0, -8)
 shape = SubResource("CapsuleShape2D_t73hm")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-self_modulate = Color(0.2509804, 1, 1, 1)
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1446005162]
 position = Vector2(1, -15)
 sprite_frames = SubResource("SpriteFrames_knxm8")
 animation = &"Walking"
